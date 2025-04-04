@@ -52,15 +52,15 @@ const About = () => {
           </p>
         </div>
       </motion.p>
-      
+
       <div className='mt-6'>
-      <a href={cv} download="cv.pdf">
-           <button className="px-6 py-2 bg-black text-white font-bold rounded-full border-2 border-white mt-2 mb-8 hover:bg-white hover:text-black">
-             My CV
-           </button>
-      </a>
+        <a href={cv} download="cv.pdf">
+          <button className="px-6 py-2 bg-black text-white font-bold rounded-full border-2 border-white mt-2 mb-8 hover:bg-white hover:text-black">
+            Download My CV
+          </button>
+        </a>
       </div>
-      
+
       <h2 className={styles.sectionHeadText}>Skills</h2>
       <div className='mt-20 flex flex-wrap gap-10'>
         {technologies.map((services, index) => (

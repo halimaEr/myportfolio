@@ -1,5 +1,5 @@
 import {
-html,css,js,react,tailwind,java,jee,springboot,sql,mysql,
+html,css,js,react,tailwind,java,jee,springboot,sql,mysql,uml,
   } from "../assets";
   
   export const navLinks = [
@@ -55,6 +55,10 @@ html,css,js,react,tailwind,java,jee,springboot,sql,mysql,
     {
       name: "SQL",
       icon: sql,
+    },
+    {
+      name: "UML",
+      icon: uml,
     },
     {
       name: "MYSQL",

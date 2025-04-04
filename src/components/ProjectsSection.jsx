@@ -3,34 +3,23 @@ import { motion, AnimatePresence } from "framer-motion";
 import { styles } from "../styles";
 import cu from './E.png'
 import {
-  img1,img2,img3,img4,img5,img6,img7,img8,img9,img10,img11,img12,
-  img13,
-  img14,
-  img15,
-  img16,
-  img17,
-  img18,
-  img19,
-  img20,
-  img21,
-  im1,im2,im3,im4,im5,im6,im7
-    
+
+  page1,p2,p3,p4,p5,p6,
+  a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18,a19,login,
+  e1,e2,e3,e4,e5,
+  im1, im2, im3, im4, im5, im6, im7
+
 } from "../assets";
+
 
 const projects = [
   {
     title: "Educational Website",
     description: "Educational Institution Management Website of EST Fquih Ben Salah",
-    images: [img1,img2,img4,img3,img5,img6,img7,img8,img9,img10,img11,img12,img17,
-      img18,
-      img19,
-      img20,
-      img21,
-      img13,
-      img14,
-      img15,
-      img16,
-      ],
+    images: [page1,p2,p3,p4,p5,p6,
+      a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18,a19,login,
+      e1,e2,e3,e4,e5
+    ],
   },
   {
     title: "Email Management Website",
@@ -40,7 +29,7 @@ const projects = [
   {
     title: "School document management website",
     description: "Simple website for managing school documents at ENSA Safi",
-    images: [im1,im2,im3,im4,im5,im6,im7],
+    images: [im1, im2, im3, im4, im5, im6, im7],
   },
 ];
 
@@ -98,13 +87,21 @@ export default function ProjectsSection() {
       </div>
 
       {selectedProject && selectedProject.images && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-          <div className="bg-gray-800 p-6 rounded-lg shadow-lg max-w-md relative">
-            <h3 className="text-lg font-semibold text-center">{selectedProject.title}</h3>
+        <div className="fixed inset-0 z-50 bg-black-100 backdrop-blur-sm flex justify-center items-center">
+          <motion.div
+            className="bg-white text-black p-6 rounded-2xl shadow-2xl w-[90%] max-w-2xl relative"
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.8, opacity: 0 }}
+            transition={{ duration: 0.4 }}
+          >
+            <h3 className="text-xl font-bold text-center mb-4 text-indigo-800">
+              {selectedProject.title}
+            </h3>
 
-            <div className="mt-4 flex justify-center items-center relative">
+            <div className="relative w-full h-72 sm:h-96 flex justify-center items-center overflow-hidden rounded-xl">
               <button
-                className="absolute left-0 bg-gray-700 p-2 rounded-full"
+                className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-indigo-700 hover:bg-indigo-800 text-white p-2 rounded-full z-10 shadow-md"
                 onClick={prevImage}
               >
                 ◀
@@ -115,31 +112,43 @@ export default function ProjectsSection() {
                   key={selectedProject.images[currentIndex]}
                   src={selectedProject.images[currentIndex]}
                   alt="Project"
-                  className="rounded-lg w-full"
+                  className="object-contain w-full h-full rounded-xl shadow-md"
                   initial={{ opacity: 0, x: 100 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -100 }}
-                  transition={{ duration: 0.5 }}
+                  transition={{ duration: 0.4 }}
                 />
               </AnimatePresence>
 
               <button
-                className="absolute right-0 bg-gray-700 p-2 rounded-full"
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-indigo-700 hover:bg-indigo-800 text-white p-2 rounded-full z-10 shadow-md"
                 onClick={nextImage}
               >
                 ▶
               </button>
             </div>
+            {/* <div className="flex justify-center mt-4 gap-2">
+              {selectedProject.images.map((_, idx) => (
+                <div
+                  key={idx}
+                  className={`w-3 h-3 rounded-full ${currentIndex === idx ? 'bg-indigo-700' : 'bg-gray-300'
+                    }`}
+                ></div>
+              ))}
+            </div> */}
 
-            <button
-              className="mt-4 w-full px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600"
-              onClick={() => setSelectedProject(null)}
-            >
-              Close
-            </button>
-          </div>
+            <div className="mt-6 flex justify-center">
+              <button
+                className="w-1/4 py-2 bg-red-500 hover:bg-red-600 text-white font-semibold rounded-xl"
+                onClick={() => setSelectedProject(null)}
+              >
+                Close
+              </button>
+            </div>
+          </motion.div>
         </div>
       )}
+
     </div>
   );
 }

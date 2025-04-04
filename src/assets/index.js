@@ -11,31 +11,44 @@ import mysql from "./tech/mysql.png";
 import java from "./tech/javaa.png";
 import jee from "./tech/jee.png";
 import springboot from "./tech/springb.png";
+import uml from "./tech/uml.png";
 
 
 
 
-import img1 from "./tech/img1.png";
-import img2 from "./tech/img2.png";
-import img3 from "./tech/img3.png";
-import img4 from "./tech/img4.png";
-import img5 from "./tech/img5.png";
-import img6 from "./tech/img6.png";
-import img7 from "./tech/img7.png";
-import img8 from "./tech/img8.png";
-import img9 from "./tech/img9.png";
-import img10 from "./tech/img10.png";
-import img11 from "./tech/img11.png";
-import img12 from "./tech/img12.png";
-import img13 from "./tech/img13.png";
-import img14 from "./tech/img14.png";
-import img15 from "./tech/img15.png";
-import img16 from "./tech/img16.png";
-import img17 from "./tech/img17.png";
-import img18 from "./tech/img18.png";
-import img19 from "./tech/img19.png";
-import img20 from "./tech/img20.png";
-import img21 from "./tech/img21.png";
+
+import page1 from "./tech/site1/page1.png";
+import p2 from "./tech/site1/p2.png";
+import p3 from "./tech/site1/p3.png";
+import p4 from "./tech/site1/p4.png";
+import p5 from "./tech/site1/p5.png";
+import p6 from "./tech/site1/p6.png";
+import a1 from "./tech/site1/a1.png";
+import a2 from "./tech/site1/a2.png";
+import a3 from "./tech/site1/a3.png";
+import a4 from "./tech/site1/a4.png";
+import a5 from "./tech/site1/a5.png";
+import a6 from "./tech/site1/a6.png";
+import a7 from "./tech/site1/a7.png";
+import a8 from "./tech/site1/a8.png";
+import a9 from "./tech/site1/a9.png";
+import a10 from "./tech/site1/a10.png";
+import a11 from "./tech/site1/a11.png";
+import a12 from "./tech/site1/a12.png";
+import a13 from "./tech/site1/a13.png";
+import a14 from "./tech/site1/a14.png";
+import a15 from "./tech/site1/a15.png";
+import a16 from "./tech/site1/a16.png";
+import a17 from "./tech/site1/a17.png";
+import a18 from "./tech/site1/a18.png";
+import a19 from "./tech/site1/a19.png";
+import e1 from "./tech/site1/e1.png";
+import e2 from "./tech/site1/e2.png";
+import e3 from "./tech/site1/e3.png";
+import e4 from "./tech/site1/e4.png";
+import e5 from "./tech/site1/e5.png";
+import login from "./tech/site1/login.png";
+
 
 
 
@@ -77,27 +90,10 @@ export {
   java,
   jee,
   springboot,
-  img1,
-  img2,
-  img3,
-  img4,
-  img5,
-  img6,
-  img7,
-  img8,
-  img9,
-  img10,
-  img11,
-  img12,
-  img13,
-  img14,
-  img15,
-  img16,
-  img17,
-  img18,
-  img19,
-  img20,
-  img21,
+  uml,
+  page1,p2,p3,p4,p5,p6,
+  a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18,a19,
+  e1,e2,e3,e4,e5,login,
   im1,im2,im3,im4,im5,im6,im7
 
   
