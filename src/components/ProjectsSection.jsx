@@ -1,7 +1,5 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { styles } from "../styles";
-import cu from './E.png'
 import {
 
   page1,p2,p3,p4,p5,p6,

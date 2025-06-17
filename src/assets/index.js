@@ -69,6 +69,9 @@ import im6 from "./tech/im6.jpg";
 import im7 from "./tech/im7.jpg";
 
 
+import ropot from './ropotedite.json'
+import pc from './pc.json'
+
 
 
 
@@ -77,6 +80,8 @@ import im7 from "./tech/im7.jpg";
 
 
 export {
+  pc,
+  ropot,
   logo,
   menu,
   close,

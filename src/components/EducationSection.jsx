@@ -67,7 +67,7 @@ function EducationSection() {
             {activeTab === "experience" && item.attestation && (
               <button
                 onClick={() => setSelectedAttestation(item.attestation)}
-                className="mt-3 px-4 py-1.5 text-sm text-white bg-purple-600 hover:bg-purple-700 rounded-lg"
+                className="mt-3 px-4 py-1.5 text-sm text-white bg-tertiary hover:bg-purple-700 rounded-lg"
               >
                 View Attestation
               </button>

@@ -2,9 +2,10 @@ import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { styles } from "../styles";
-import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
+import Lottie from 'lottie-react';
+import { ropot } from "../assets";
 
 const Contact = () => {
   const formRef = useRef();
@@ -30,28 +31,28 @@ const Contact = () => {
         "service_xg52jib", // Remplace par ton Service ID
         "template_m4qskd8", // Remplace par ton Template ID
         {
-          from_name: form.name,  
-          from_email: form.email, 
-          message: form.message, 
+          from_name: form.name,
+          from_email: form.email,
+          message: form.message,
         },
         "26X_eukZZLo782_mw" // Remplace par ta Public Key
       )
       .then(() => {
-          setLoading(false);
-          setNotification({ message: "Message envoyé avec succès !", type: "success" });
-          setForm({ name: "", email: "", message: "" });
+        setLoading(false);
+        setNotification({ message: "Message envoyé avec succès !", type: "success" });
+        setForm({ name: "", email: "", message: "" });
 
-          // Cacher la notification après 5 secondes
-          setTimeout(() => setNotification({ message: "", type: "" }), 5000);
-        })
+        // Cacher la notification après 5 secondes
+        setTimeout(() => setNotification({ message: "", type: "" }), 5000);
+      })
       .catch((error) => {
-          setLoading(false);
-          console.error(error);
-          setNotification({ message: "Une erreur s'est produite, veuillez réessayer.", type: "error" });
+        setLoading(false);
+        console.error(error);
+        setNotification({ message: "Une erreur s'est produite, veuillez réessayer.", type: "error" });
 
-          // Cacher la notification après 5 secondes
-          setTimeout(() => setNotification({ message: "", type: "" }), 5000);
-        });
+        // Cacher la notification après 5 secondes
+        setTimeout(() => setNotification({ message: "", type: "" }), 5000);
+      });
   };
 
   return (
@@ -117,9 +118,17 @@ const Contact = () => {
       </motion.div>
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
-        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
       >
-        <EarthCanvas />
+        <div className="xl:flex-1 xl:h-auto md:h-[550px] h-[250px] w-full"
+        > 
+          <Lottie
+            animationData={ropot}
+            loop
+            autoplay
+          />
+        </div>
+
+
       </motion.div>
     </div>
   );
