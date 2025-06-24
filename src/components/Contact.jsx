@@ -33,6 +33,7 @@ const Contact = () => {
         {
           from_name: form.name,
           from_email: form.email,
+          reply_to: form.email,
           message: form.message,
         },
         "26X_eukZZLo782_mw" // Remplace par ta Public Key
@@ -120,7 +121,7 @@ const Contact = () => {
         variants={slideIn("right", "tween", 0.2, 1)}
       >
         <div className="xl:flex-1 xl:h-auto md:h-[550px] h-[250px] w-full"
-        > 
+        >
           <Lottie
             animationData={ropot}
             loop
